@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:background="@drawable/bg_gradient_screen"
+    tools:context=".SignUpActivity">
+
+    <LinearLayout
+        android:id="@+id/layoutRoot"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="24dp">
+
+        <!-- Back Button & Header -->
+        <ImageView
+            android:id="@+id/btnBack"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:src="@android:drawable/ic_menu_revert"
+            android:background="@drawable/bg_input"
+            android:padding="8dp"
+            android:contentDescription="@string/app_name"
+            android:layout_marginBottom="16dp"
+            app:tint="@color/white" />
+
+        <!-- Frosted Glass Card Container -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@drawable/bg_glass_card"
+            android:padding="24dp"
+            android:elevation="8dp">
+
+            <!-- Title -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/signup_title"
+                style="@style/ScreenTitle"
+                android:textSize="26sp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="4dp" />
+
+            <!-- Subtitle -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/signup_subtitle"
+                android:textColor="@color/hint"
+                android:textSize="14sp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="20dp" />
+
+            <!-- Full Name -->
+            <EditText
+                android:id="@+id/etFullName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/GlassInput"
+                android:hint="@string/fullname_hint"
+                android:inputType="textPersonName"
+                android:autofillHints="name"
+                android:layout_marginBottom="14dp" />
+
+            <!-- Username -->
+            <EditText
+                android:id="@+id/etUsername"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/GlassInput"
+                android:hint="@string/username_hint"
+                android:inputType="text"
+                android:autofillHints="username"
+                android:layout_marginBottom="14dp" />
+
+            <!-- Email -->
+            <EditText
+                android:id="@+id/etEmail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/GlassInput"
+                android:hint="@string/email_hint"
+                android:inputType="textEmailAddress"
+                android:autofillHints="emailAddress"
+                android:layout_marginBottom="14dp" />
+
+            <!-- Phone -->
+            <EditText
+                android:id="@+id/etPhone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/GlassInput"
+                android:hint="@string/phone_hint"
+                android:inputType="phone"
+                android:autofillHints="phone"
+                android:layout_marginBottom="14dp" />
+
+            <!-- Location -->
+            <EditText
+                android:id="@+id/etLocation"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/GlassInput"
+                android:hint="@string/location_hint"
+                android:inputType="textPostalAddress"
+                android:autofillHints="postalAddress"
+                android:layout_marginBottom="14dp" />
+
+            <!-- Password -->
+            <EditText
+                android:id="@+id/etPassword"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/GlassInput"
+                android:hint="@string/password_hint"
+                android:inputType="textPassword"
+                android:autofillHints="newPassword"
+                android:layout_marginBottom="6dp" />
+
+            <!-- Live Password Strength Meter -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_marginBottom="14dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Strength: "
+                    android:textColor="@color/hint"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:id="@+id/tvPasswordStrength"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Weak"
+                    android:textColor="@color/coral"
+                    android:textSize="12sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <!-- Confirm Password -->
+            <EditText
+                android:id="@+id/etConfirmPassword"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/GlassInput"
+                android:hint="@string/confirm_password_hint"
+                android:inputType="textPassword"
+                android:autofillHints="newPassword"
+                android:layout_marginBottom="14dp" />
+
+            <!-- Terms Checkbox -->
+            <CheckBox
+                android:id="@+id/cbTerms"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/terms_checkbox"
+                android:textColor="@color/lavender"
+                android:buttonTint="@color/lavender"
+                android:textSize="13sp"
+                android:layout_marginBottom="20dp" />
+
+            <!-- Create Account Button -->
+            <Button
+                android:id="@+id/btnSignUp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/PrimaryButton"
+                android:text="@string/signup_button"
+                android:layout_marginBottom="16dp" />
+
+            <!-- Login Link -->
+            <TextView
+                android:id="@+id/tvLoginLink"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/LinkText"
+                android:text="@string/login_prompt"
+                android:layout_gravity="center_horizontal"
+                android:padding="8dp" />
+
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

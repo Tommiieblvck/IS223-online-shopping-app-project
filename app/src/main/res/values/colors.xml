@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <!-- Frosted Purple Glass Palette -->
+    <color name="primary">#605FB4</color>
+    <color name="primary_dark">#484790</color>
+    <color name="primary_purple">#605FB4</color>
+    <color name="primary_purple_dark">#484790</color>
+    <color name="purple_gradient_end">#6A67C0</color>
+    <color name="lavender">#B9B7F0</color>
+    <color name="mint">#7EE0B5</color>
+    <color name="coral">#FF6B81</color>
+    <color name="near_white">#F4F3FF</color>
+
+    <!-- Glass & Input Accents -->
+    <color name="glass_fill">#26FFFFFF</color>
+    <color name="glass_border">#66FFFFFF</color>
+    <color name="input_fill">#1AFFFFFF</color>
+    <color name="input_outline">#80FFFFFF</color>
+    <color name="button_gradient_start">#8B89F0</color>
+    <color name="button_gradient_end">#5D5BC0</color>
+    <color name="hint">#B3FFFFFF</color>
+
+    <!-- Legacy / Utility Colors -->
+    <color name="light_purple">#EDE7FF</color>
+    <color name="screen_background">#605FB4</color>
+    <color name="text_dark">#1F1F2E</color>
+    <color name="text_grey">#7A7A8C</color>
+    <color name="accent_red">#E53935</color>
+    <color name="card_background">#26FFFFFF</color>
+    <color name="overlay_dark">#66000000</color>
+</resources>

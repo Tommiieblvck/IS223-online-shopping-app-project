@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="@drawable/bg_gradient_screen"
+    tools:context=".ProductListActivity">
+
+    <TextView
+        android:id="@+id/tvTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Products"
+        style="@style/ScreenTitle"
+        android:layout_marginBottom="12dp" />
+
+    <HorizontalScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="none"
+        android:layout_marginBottom="12dp">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btnFilterAll"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/PrimaryButton"
+                android:text="All"
+                android:layout_marginEnd="8dp" />
+
+            <Button
+                android:id="@+id/btnFilterStationary"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/PrimaryButton"
+                android:text="Stationary"
+                android:layout_marginEnd="8dp" />
+
+            <Button
+                android:id="@+id/btnFilterElectronics"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/PrimaryButton"
+                android:text="Electronics"
+                android:layout_marginEnd="8dp" />
+
+            <Button
+                android:id="@+id/btnFilterClothing"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/PrimaryButton"
+                android:text="Clothing" />
+
+        </LinearLayout>
+    </HorizontalScrollView>
+
+    <Button
+        android:id="@+id/btnViewCart"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/PrimaryButton"
+        android:text="View Cart"
+        android:layout_marginBottom="12dp" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:id="@+id/productContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" />
+    </ScrollView>
+
+</LinearLayout>

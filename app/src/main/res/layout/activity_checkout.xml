@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:background="@drawable/bg_gradient_screen"
+    tools:context=".CheckoutActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- Frosted Glass Card Container -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@drawable/bg_glass_card"
+            android:padding="20dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/checkout_title"
+                style="@style/ScreenTitle"
+                android:layout_marginBottom="16dp" />
+
+            <EditText
+                android:id="@+id/etName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/GlassInput"
+                android:hint="@string/hint_name"
+                android:autofillHints="name"
+                android:inputType="textPersonName"
+                android:layout_marginBottom="12dp" />
+
+            <EditText
+                android:id="@+id/etPhone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/GlassInput"
+                android:hint="@string/hint_phone"
+                android:autofillHints="phone"
+                android:inputType="phone"
+                android:layout_marginBottom="12dp" />
+
+            <EditText
+                android:id="@+id/etLocation"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/GlassInput"
+                android:hint="@string/hint_location"
+                android:autofillHints="postalAddress"
+                android:inputType="textPostalAddress"
+                android:layout_marginBottom="16dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/order_summary"
+                android:textColor="@color/lavender"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:layout_marginBottom="8dp" />
+
+            <TextView
+                android:id="@+id/tvSummary"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="14sp"
+                android:textColor="@color/white"
+                android:layout_marginBottom="24dp"
+                tools:text="1 x Product A - K10.00\nTOTAL: K10.00" />
+
+            <Button
+                android:id="@+id/btnPlaceOrder"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/PrimaryButton"
+                android:text="@string/place_order" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>

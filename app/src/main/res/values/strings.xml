@@ -1,0 +1,50 @@
+<resources>
+    <string name="app_name">Theodist Super Store</string>
+    <string name="welcome_label">Welcome</string>
+    <string name="default_user_name">John Rambo</string>
+    <string name="search_hint">Search anything…</string>
+    <string name="banner_brand">THEODIST TECHNOLOGY</string>
+    <string name="banner_title">Discount 20% For Stationary!</string>
+    <string name="banner_btn">Buy Now</string>
+    <string name="categories_title">Categories</string>
+    <string name="see_all">See all</string>
+    <string name="popular_products_title">Popular Products</string>
+    <string name="no_products_found">No products found</string>
+    <string name="added_to_cart">Added to cart</string>
+
+    <!-- Bottom Nav Strings -->
+    <string name="nav_explorer">Explorer</string>
+    <string name="nav_wishlist">Wishlist</string>
+    <string name="nav_cart">Cart</string>
+    <string name="nav_profile">Profile</string>
+
+    <!-- Checkout Strings -->
+    <string name="checkout_title">Checkout</string>
+    <string name="hint_name">Full Name</string>
+    <string name="hint_phone">Phone Number</string>
+    <string name="hint_location">Delivery Location</string>
+    <string name="order_summary">Order Summary</string>
+    <string name="place_order">Place Order</string>
+
+    <!-- Login Strings -->
+    <string name="login_title">Login</string>
+    <string name="login_subtitle">Welcome back, please login to your account</string>
+    <string name="username_hint">Username or Email</string>
+    <string name="password_hint">Password</string>
+    <string name="remember_me">Remember me</string>
+    <string name="login_button">Login</string>
+    <string name="signup_prompt">Don\'t have an account? Sign Up</string>
+    <string name="prototype_footer">Prototype - no real payments</string>
+
+    <!-- Sign Up Strings -->
+    <string name="signup_title">Create Account</string>
+    <string name="signup_subtitle">Sign up to get started with shopping</string>
+    <string name="fullname_hint">Full Name</string>
+    <string name="email_hint">Email Address</string>
+    <string name="phone_hint">Phone Number</string>
+    <string name="location_hint">Delivery Location (e.g. Lae)</string>
+    <string name="confirm_password_hint">Confirm Password</string>
+    <string name="terms_checkbox">I agree to the terms (prototype app)</string>
+    <string name="signup_button">Create Account</string>
+    <string name="login_prompt">Already have an account? Login</string>
+</resources>

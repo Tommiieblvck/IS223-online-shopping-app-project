@@ -1,0 +1,466 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/screen_background"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <!-- SCROLLABLE CONTENT -->
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:fillViewport="true">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <!-- 1. HEADER -->
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/shape_header_bg"
+                    android:padding="@dimen/screen_padding"
+                    android:paddingBottom="24dp">
+
+                    <!-- Left: Welcome & User Name -->
+                    <LinearLayout
+                        android:id="@+id/layoutWelcome"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:layout_toStartOf="@id/layoutCartIcon"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/welcome_label"
+                            android:textColor="@color/light_purple"
+                            android:textSize="14sp" />
+
+                        <TextView
+                            android:id="@+id/tvUserName"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/default_user_name"
+                            android:textColor="@color/white"
+                            android:textSize="18sp"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+
+                    <!-- Right: Cart Icon with Badge -->
+                    <FrameLayout
+                        android:id="@+id/layoutCartIcon"
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        android:layout_alignParentEnd="true"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:foreground="?android:attr/selectableItemBackground">
+
+                        <ImageView
+                            android:layout_width="28dp"
+                            android:layout_height="28dp"
+                            android:layout_gravity="center"
+                            android:src="@android:drawable/ic_menu_send"
+                            app:tint="@color/white"
+                            android:contentDescription="Cart" />
+
+                        <!-- Red Badge -->
+                        <TextView
+                            android:id="@+id/tvCartBadge"
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:layout_gravity="top|end"
+                            android:background="@drawable/shape_badge_bg"
+                            android:gravity="center"
+                            android:text="0"
+                            android:textColor="@color/white"
+                            android:textSize="11sp"
+                            android:textStyle="bold"
+                            android:visibility="visible" />
+                    </FrameLayout>
+
+                    <!-- Below Header: Search Bar -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="48dp"
+                        android:layout_below="@id/layoutWelcome"
+                        android:layout_marginTop="16dp"
+                        android:background="@drawable/shape_search_bg"
+                        android:gravity="center_vertical"
+                        android:paddingHorizontal="16dp">
+
+                        <ImageView
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:src="@android:drawable/ic_menu_search"
+                            app:tint="@color/text_grey"
+                            android:contentDescription="Search" />
+
+                        <EditText
+                            android:id="@+id/etSearch"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@null"
+                            android:hint="@string/search_hint"
+                            android:imeOptions="actionSearch"
+                            android:inputType="text"
+                            android:paddingStart="12dp"
+                            android:paddingEnd="12dp"
+                            android:textColor="@color/text_dark"
+                            android:textColorHint="@color/text_grey"
+                            android:textSize="14sp"
+                            android:autofillHints="name" />
+                    </LinearLayout>
+                </RelativeLayout>
+
+                <!-- MAIN CONTENT CONTAINER -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="@dimen/screen_padding">
+
+                    <!-- 2. PROMOTION BANNER WITH images.png -->
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="150dp"
+                        android:layout_marginBottom="@dimen/section_spacing"
+                        app:cardCornerRadius="@dimen/card_corner_radius"
+                        app:cardElevation="4dp">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <!-- Background Image Filling Container -->
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:scaleType="centerCrop"
+                                android:src="@drawable/images"
+                                android:contentDescription="Promotion Banner" />
+
+                            <!-- Strong Dark Overlay / Scrim for Readability -->
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:background="#991F1F2E" />
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:orientation="vertical"
+                                android:padding="16dp"
+                                android:gravity="center_vertical">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/banner_brand"
+                                    android:textColor="@color/mint"
+                                    android:textSize="12sp"
+                                    android:textStyle="bold" />
+
+                                <TextView
+                                    android:layout_width="220dp"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/banner_title"
+                                    android:textColor="@color/white"
+                                    android:textSize="18sp"
+                                    android:textStyle="bold"
+                                    android:layout_marginTop="4dp"
+                                    android:shadowColor="#80000000"
+                                    android:shadowDx="1"
+                                    android:shadowDy="1"
+                                    android:shadowRadius="3" />
+
+                                <Button
+                                    android:id="@+id/btnBannerBuy"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="36dp"
+                                    android:backgroundTint="@color/white"
+                                    android:text="@string/banner_btn"
+                                    android:textColor="@color/primary_purple"
+                                    android:textSize="12sp"
+                                    android:textStyle="bold"
+                                    android:minWidth="0dp"
+                                    android:minHeight="0dp"
+                                    android:paddingHorizontal="16dp"
+                                    android:layout_marginTop="12dp" />
+                            </LinearLayout>
+                        </RelativeLayout>
+                    </androidx.cardview.widget.CardView>
+
+                    <!-- 3. CATEGORIES -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical"
+                        android:layout_marginBottom="12dp">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="@string/categories_title"
+                            android:textColor="@color/text_dark"
+                            android:textSize="18sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/tvSeeAllCategories"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/see_all"
+                            android:textColor="@color/primary_purple"
+                            android:textSize="14sp"
+                            android:textStyle="bold"
+                            android:clickable="true"
+                            android:focusable="true" />
+                    </LinearLayout>
+
+                    <!-- Horizontal Category Row (Stationary, Technology, Toys, Office Furniture, View all) -->
+                    <HorizontalScrollView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:scrollbars="none"
+                        android:layout_marginBottom="@dimen/section_spacing">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <!-- Category 1: Stationary -->
+                            <LinearLayout
+                                android:id="@+id/catStationary"
+                                android:layout_width="72dp"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical"
+                                android:gravity="center"
+                                android:layout_marginEnd="12dp"
+                                android:clickable="true"
+                                android:focusable="true">
+
+                                <FrameLayout
+                                    android:layout_width="60dp"
+                                    android:layout_height="60dp"
+                                    android:background="@drawable/shape_circle_bg">
+
+                                    <ImageView
+                                        android:layout_width="28dp"
+                                        android:layout_height="28dp"
+                                        android:layout_gravity="center"
+                                        android:src="@android:drawable/ic_menu_agenda"
+                                        app:tint="@color/primary_purple"
+                                        android:contentDescription="Stationary" />
+                                </FrameLayout>
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Stationary"
+                                    android:textColor="@color/text_dark"
+                                    android:textSize="12sp"
+                                    android:layout_marginTop="6dp" />
+                            </LinearLayout>
+
+                            <!-- Category 2: Technology -->
+                            <LinearLayout
+                                android:id="@+id/catTechnology"
+                                android:layout_width="72dp"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical"
+                                android:gravity="center"
+                                android:layout_marginEnd="12dp"
+                                android:clickable="true"
+                                android:focusable="true">
+
+                                <FrameLayout
+                                    android:layout_width="60dp"
+                                    android:layout_height="60dp"
+                                    android:background="@drawable/shape_circle_bg">
+
+                                    <ImageView
+                                        android:layout_width="28dp"
+                                        android:layout_height="28dp"
+                                        android:layout_gravity="center"
+                                        android:src="@android:drawable/ic_menu_manage"
+                                        app:tint="@color/primary_purple"
+                                        android:contentDescription="Technology" />
+                                </FrameLayout>
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Technology"
+                                    android:textColor="@color/text_dark"
+                                    android:textSize="12sp"
+                                    android:layout_marginTop="6dp" />
+                            </LinearLayout>
+
+                            <!-- Category 3: Toys -->
+                            <LinearLayout
+                                android:id="@+id/catToys"
+                                android:layout_width="72dp"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical"
+                                android:gravity="center"
+                                android:layout_marginEnd="12dp"
+                                android:clickable="true"
+                                android:focusable="true">
+
+                                <FrameLayout
+                                    android:layout_width="60dp"
+                                    android:layout_height="60dp"
+                                    android:background="@drawable/shape_circle_bg">
+
+                                    <ImageView
+                                        android:layout_width="28dp"
+                                        android:layout_height="28dp"
+                                        android:layout_gravity="center"
+                                        android:src="@android:drawable/ic_menu_slideshow"
+                                        app:tint="@color/primary_purple"
+                                        android:contentDescription="Toys" />
+                                </FrameLayout>
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Toys"
+                                    android:textColor="@color/text_dark"
+                                    android:textSize="12sp"
+                                    android:layout_marginTop="6dp" />
+                            </LinearLayout>
+
+                            <!-- Category 4: Office Furniture -->
+                            <LinearLayout
+                                android:id="@+id/catFurniture"
+                                android:layout_width="72dp"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical"
+                                android:gravity="center"
+                                android:layout_marginEnd="12dp"
+                                android:clickable="true"
+                                android:focusable="true">
+
+                                <FrameLayout
+                                    android:layout_width="60dp"
+                                    android:layout_height="60dp"
+                                    android:background="@drawable/shape_circle_bg">
+
+                                    <ImageView
+                                        android:layout_width="28dp"
+                                        android:layout_height="28dp"
+                                        android:layout_gravity="center"
+                                        android:src="@android:drawable/ic_menu_my_calendar"
+                                        app:tint="@color/primary_purple"
+                                        android:contentDescription="Office Furniture" />
+                                </FrameLayout>
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Furniture"
+                                    android:textColor="@color/text_dark"
+                                    android:textSize="12sp"
+                                    android:layout_marginTop="6dp" />
+                            </LinearLayout>
+
+                            <!-- Category 5: View all -->
+                            <LinearLayout
+                                android:id="@+id/catViewAll"
+                                android:layout_width="72dp"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical"
+                                android:gravity="center"
+                                android:clickable="true"
+                                android:focusable="true">
+
+                                <FrameLayout
+                                    android:layout_width="60dp"
+                                    android:layout_height="60dp"
+                                    android:background="@drawable/shape_circle_bg">
+
+                                    <ImageView
+                                        android:layout_width="28dp"
+                                        android:layout_height="28dp"
+                                        android:layout_gravity="center"
+                                        android:src="@android:drawable/ic_menu_more"
+                                        app:tint="@color/primary_purple"
+                                        android:contentDescription="View all" />
+                                </FrameLayout>
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="View all"
+                                    android:textColor="@color/text_dark"
+                                    android:textSize="12sp"
+                                    android:layout_marginTop="6dp" />
+                            </LinearLayout>
+
+                        </LinearLayout>
+                    </HorizontalScrollView>
+
+                    <!-- 4. POPULAR PRODUCTS -->
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/popular_products_title"
+                        android:textColor="@color/text_dark"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        android:layout_marginBottom="12dp" />
+
+                    <!-- Empty State View -->
+                    <TextView
+                        android:id="@+id/tvEmpty"
+                        android:layout_width="match_parent"
+                        android:layout_height="100dp"
+                        android:gravity="center"
+                        android:text="@string/no_products_found"
+                        android:textColor="@color/text_grey"
+                        android:textSize="16sp"
+                        android:visibility="gone" />
+
+                    <!-- Custom WrapContentRecyclerView with 2 columns to prevent grid clipping -->
+                    <com.example.theodistonline_shoppingapp.WrapContentRecyclerView
+                        android:id="@+id/recyclerViewPopular"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:nestedScrollingEnabled="false"
+                        tools:itemCount="4"
+                        tools:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+                        tools:spanCount="2" />
+
+                </LinearLayout>
+            </LinearLayout>
+        </ScrollView>
+
+        <!-- 5. BOTTOM NAVIGATION -->
+        <com.google.android.material.bottomnavigation.BottomNavigationView
+            android:id="@+id/bottomNavigationView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            app:itemIconTint="@color/primary_purple"
+            app:itemTextColor="@color/primary_purple"
+            app:menu="@menu/bottom_nav_menu" />
+
+    </LinearLayout>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

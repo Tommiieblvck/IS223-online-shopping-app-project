@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:background="@drawable/bg_gradient_screen"
+    tools:context=".LoginActivity">
+
+    <LinearLayout
+        android:id="@+id/layoutRoot"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:padding="24dp">
+
+        <!-- Background Logo at the top -->
+        <ImageView
+            android:layout_width="140dp"
+            android:layout_height="64dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/background_logo"
+            android:contentDescription="Theodist Logo"
+            android:layout_marginBottom="16dp" />
+
+        <!-- Frosted Glass Card Container -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@drawable/bg_glass_card"
+            android:padding="24dp"
+            android:elevation="8dp">
+
+            <!-- Brand Label -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/app_name"
+                android:textColor="@color/lavender"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:textAllCaps="true"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="4dp" />
+
+            <!-- Title -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/login_title"
+                style="@style/ScreenTitle"
+                android:textSize="28sp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="4dp" />
+
+            <!-- Subtitle -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/login_subtitle"
+                android:textColor="@color/hint"
+                android:textSize="14sp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="24dp" />
+
+            <!-- Username / Email Field -->
+            <EditText
+                android:id="@+id/etUsername"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/GlassInput"
+                android:hint="@string/username_hint"
+                android:inputType="textEmailAddress"
+                android:drawableStart="@android:drawable/ic_menu_my_calendar"
+                android:drawablePadding="12dp"
+                android:autofillHints="username"
+                android:layout_marginBottom="16dp" />
+
+            <!-- Password Field -->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp">
+
+                <EditText
+                    android:id="@+id/etPassword"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    style="@style/GlassInput"
+                    android:hint="@string/password_hint"
+                    android:inputType="textPassword"
+                    android:drawableStart="@android:drawable/ic_lock_lock"
+                    android:drawablePadding="12dp"
+                    android:autofillHints="password" />
+
+                <ImageView
+                    android:id="@+id/ivTogglePassword"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:padding="12dp"
+                    android:src="@android:drawable/ic_menu_view"
+                    android:contentDescription="@string/app_name"
+                    app:tint="@color/white" />
+            </RelativeLayout>
+
+            <!-- Remember Me Checkbox -->
+            <CheckBox
+                android:id="@+id/cbRememberMe"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/remember_me"
+                android:textColor="@color/lavender"
+                android:buttonTint="@color/lavender"
+                android:layout_marginBottom="20dp" />
+
+            <!-- Login Button with ProgressBar Container -->
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp">
+
+                <Button
+                    android:id="@+id/btnLogin"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    style="@style/PrimaryButton"
+                    android:text="@string/login_button" />
+
+                <ProgressBar
+                    android:id="@+id/progressBar"
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:layout_gravity="center"
+                    android:indeterminateTint="@color/white"
+                    android:visibility="gone" />
+            </FrameLayout>
+
+            <!-- Sign Up Link -->
+            <TextView
+                android:id="@+id/tvSignUpLink"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/LinkText"
+                android:text="@string/signup_prompt"
+                android:layout_gravity="center_horizontal"
+                android:padding="8dp" />
+
+        </LinearLayout>
+
+        <!-- Prototype Footer -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/prototype_footer"
+            android:textColor="@color/hint"
+            android:textSize="12sp"
+            android:layout_marginTop="24dp" />
+
+    </LinearLayout>
+</ScrollView>
