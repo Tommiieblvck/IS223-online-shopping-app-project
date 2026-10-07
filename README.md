@@ -96,7 +96,7 @@ IS223-online-shopping-app-project/
 ### Data Model
 - `Customer.java` stores customer information
 - `Order.java` represents a customer order
-- `Clothing.java`, `Electronics.java`, and `Stationary.java` model product types
+- `Stationary.java`, `Technology.java`, `Toys.java`, and `OfficeFurniture.java` model product types
 - `PopularDomain.java` supports the UI product display structure
 
 ## Screens Included

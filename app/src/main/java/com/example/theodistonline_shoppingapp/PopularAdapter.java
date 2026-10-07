@@ -71,9 +71,11 @@ public class PopularAdapter extends RecyclerView.Adapter<PopularAdapter.ViewHold
         if ("Stationary".equalsIgnoreCase(cat)) {
             return new Stationary(item.getTitle(), item.getPrice(), item.getImageResource());
         } else if ("Technology".equalsIgnoreCase(cat) || "Electronics".equalsIgnoreCase(cat)) {
-            return new Electronics(item.getTitle(), item.getPrice());
-        } else if ("Toys".equalsIgnoreCase(cat) || "Cloths".equalsIgnoreCase(cat)) {
-            return new Product(item.getTitle(), item.getPrice(), cat, item.getImageResource());
+            return new Technology(item.getTitle(), item.getPrice(), item.getImageResource());
+        } else if ("Toys".equalsIgnoreCase(cat)) {
+            return new Toys(item.getTitle(), item.getPrice(), item.getImageResource());
+        } else if ("Office Furniture".equalsIgnoreCase(cat) || "Furniture".equalsIgnoreCase(cat)) {
+            return new OfficeFurniture(item.getTitle(), item.getPrice(), item.getImageResource());
         } else {
             return new Product(item.getTitle(), item.getPrice(), cat, item.getImageResource());
         }
