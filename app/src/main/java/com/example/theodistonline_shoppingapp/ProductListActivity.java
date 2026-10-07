@@ -35,8 +35,9 @@ public class ProductListActivity extends AppCompatActivity {
 
         findViewById(R.id.btnFilterAll).setOnClickListener(v -> setCategory("All"));
         findViewById(R.id.btnFilterStationary).setOnClickListener(v -> setCategory("Stationary"));
-        findViewById(R.id.btnFilterElectronics).setOnClickListener(v -> setCategory("Electronics"));
-        findViewById(R.id.btnFilterClothing).setOnClickListener(v -> setCategory("Clothing"));
+        findViewById(R.id.btnFilterTechnology).setOnClickListener(v -> setCategory("Technology"));
+        findViewById(R.id.btnFilterToys).setOnClickListener(v -> setCategory("Toys"));
+        findViewById(R.id.btnFilterFurniture).setOnClickListener(v -> setCategory("Office Furniture"));
         btnViewCart.setOnClickListener(v -> startActivity(new Intent(this, CartActivity.class)));
 
         showProducts();

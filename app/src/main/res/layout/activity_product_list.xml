@@ -44,19 +44,27 @@
                 android:layout_marginEnd="8dp" />
 
             <Button
-                android:id="@+id/btnFilterElectronics"
+                android:id="@+id/btnFilterTechnology"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 style="@style/PrimaryButton"
-                android:text="Electronics"
+                android:text="Technology"
                 android:layout_marginEnd="8dp" />
 
             <Button
-                android:id="@+id/btnFilterClothing"
+                android:id="@+id/btnFilterToys"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 style="@style/PrimaryButton"
-                android:text="Clothing" />
+                android:text="Toys"
+                android:layout_marginEnd="8dp" />
+
+            <Button
+                android:id="@+id/btnFilterFurniture"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/PrimaryButton"
+                android:text="Office Furniture" />
 
         </LinearLayout>
     </HorizontalScrollView>
